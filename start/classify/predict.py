@@ -209,7 +209,12 @@ def predict_image_from_url(image_url):
 
     _initialize()
 
-    with urlopen(image_url) as testImage:
-        image = Image.open(testImage)
+    try:
+        with urlopen(image_url) as testImage: 
+            image = Image.open(testImage)
+            return _predict_image(image)
+    except:
+        image = Image.open(image_url)
         return _predict_image(image)
+
 
