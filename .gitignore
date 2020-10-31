@@ -1,0 +1,6 @@
+env-*
+resources/model/*
+*__pycache__*
+*.vscode*
+start/classify/model.pb
+start/classify/labels.txt
